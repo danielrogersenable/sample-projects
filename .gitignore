@@ -1,0 +1,70 @@
+# Build results
+bin/
+obj/
+dist/
+build/
+Releases/
+msbuild.log
+
+# Test results
+test_reports/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# NuGet v3's project.json files produces more ignorable files
+*.nuget.props
+*.nuget.targets
+
+# NPM Packages
+node_modules/
+npm-debug.log
+
+# IDE - VSCode
+.settings/
+.vscode/
+
+# IDE - VS
+.vs/
+*.csproj.user
+
+# IDE - WebStorm
+.idea/
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Test results
+Source/Web/test_reports/*
+
+# app files
+App_Data/
+dev-branch.txt
+dev-database-server.txt
+dev-machine-name.txt
+Source/Web/Areas/**/*.css
+Source/Web/Areas/**/*.js
+Source/Web/Content/**/*.css
+Source/Web/Scripts/signalr-hubs.js
+Source/Web/Scripts/App/**/*.js
+Source/Web/Scripts/Test/**/*.js
+Source/Web/Scripts/lib/*.js
+/Source/Service.Install
+/Source/BackgroundingService.Install
+/Source/MetricsService.Install
+/Source/dev-branch.txt.txt
+/Source/dev-database-server.text.txt
+/dev-branch.txt.txt
+/dev-database-server.text.txt
+/Source/CalculationQueue.Install
+/Source/SelectionRuleQueue.Install
+/Source/OvernightReportsQueue.Install
+
+# Language files
+*.zu.resx
