@@ -1,0 +1,18 @@
+@import './../../variables';
+
+.tile {
+    border: 1px solid $tertiary-color;
+    border-radius: 5px;
+    padding: 1rem;
+    height: 20rem;
+
+    background-color: $tertiary-color;
+
+    .tile-title {
+        color: $secondary-text-color;
+    }
+
+    .tile-content {
+        color: $secondary-text-color;
+    }
+}
