@@ -117,7 +117,7 @@ namespace TestCoreConsoleApp.Service
             "office",
             "restaurant",
             "revolution",
-            "Eygptian mummy",
+            "Egyptian mummy",
             "flying bird",
             "rugby player",
             "gubbins",
@@ -125,7 +125,15 @@ namespace TestCoreConsoleApp.Service
             "crocodile",
             "engineer",
             "hedgehog",
-            "hairbrush"
+            "hairbrush",
+            "panda",
+            "musketeer",
+            "bandana",
+            "pinstripe suit",
+            "love",
+            "exception",
+            "tunnel",
+            "penguin"
         };
 
         public static readonly List<string> VerbList = new List<string>
@@ -170,7 +178,14 @@ namespace TestCoreConsoleApp.Service
             "lost the bounce from its bungee",
             "consciously uncoupled",
             "been quarantined",
-            "airbrushed"
+            "airbrushed",
+            "errored",
+            "expanded",
+            "disintegrated",
+            "disappeared",
+            "been over-estimated",
+            "been under-estimated",
+            "been correctly estimated (apparently a problem)"
         };
 
         public static readonly List<string> AdjectiveList = new List<string>
@@ -216,7 +231,18 @@ namespace TestCoreConsoleApp.Service
             "overly elaborate",
             "ornate",
             "extremely valuable",
-            "unimaginative"
+            "unimaginative",
+            "hateful",
+            "dislocated",
+            "underappreciated",
+            "indescribable",
+            "quantum",
+            "exceptional",
+            "French",
+            "Swiss",
+            "formidable",
+            "lucky",
+            "friendly"
         };
     }
 }
