@@ -17,7 +17,7 @@ namespace TestCoreConsoleApp.Service
             _telemetryClient = telemetryClient;
         }
 
-        public void Run(bool shouldBreak, bool useRandomError, int errorCount)
+        public void Run(bool shouldBreak, bool useRandomError, int errorCount, string exceptionMessage)
         {
             var logger = _loggerFactory.CreateLogger<TestService>();
 
@@ -32,7 +32,7 @@ namespace TestCoreConsoleApp.Service
 
                 if (shouldBreak)
                 {
-                    throw new Exception("I threw an exception, but only because you asked me to.");
+                    throw new Exception(exceptionMessage ?? "I threw an exception, but only because you asked me to.");
                 }
             }
             catch(Exception ex)

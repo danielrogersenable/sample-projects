@@ -21,6 +21,8 @@ namespace TestCoreConsoleApp
 
                 using (var serviceProvider = ConfigureService(configuration, channel))
                 {
+                    string exceptionMessage = null;
+
                     Console.WriteLine("Do you want this to break? Y/N");
                     var foo = Console.ReadLine();
 
@@ -42,6 +44,8 @@ namespace TestCoreConsoleApp
                         else
                         {
                             Console.WriteLine("Boring...");
+                            Console.WriteLine("Ok, so what would you like the exception message to be?");
+                            exceptionMessage = Console.ReadLine();
                         }
 
                         Console.WriteLine("How many errors should we generate?");
@@ -55,7 +59,7 @@ namespace TestCoreConsoleApp
                         Console.WriteLine("Suit yourself, we won't break this time");
                     }
 
-                    serviceProvider.GetService<TestService>().Run(shouldBreak, useRandomError, errorCount);
+                    serviceProvider.GetService<TestService>().Run(shouldBreak, useRandomError, errorCount, exceptionMessage);
                 }
 
                 Console.WriteLine("Hello World!");
