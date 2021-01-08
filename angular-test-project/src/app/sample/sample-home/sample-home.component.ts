@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
   selector: 'app-sample-home',
@@ -7,12 +8,28 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SampleHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(updates: SwUpdate) {
+    this.message = '';
+    updates.available.subscribe(event => {
+      this.message = 'new event is available! oooooh, shiny!'
+      console.log(this.message);
+      setTimeout(() => {
+        updates.activateUpdate();
+      }, 2000);
+    });
+
+    updates.activated.subscribe(event => {
+      this.message = 'assemble!';
+      console.log(this.message);
+    });
+   }
 
   ngOnInit(): void {
   }
 
   @Input() numberValue: number;
+
+  message: string;
 
   public getSmallestFactor(numberValue: number) : number {
     let currentNumber = 2;
@@ -34,7 +51,6 @@ export class SampleHomeComponent implements OnInit {
     let complete = false;
 
     while(!complete) {
-      console.log('running');
       const currentFactor = this.getSmallestFactor(currentValue);
       stringText.push(`One factor of ${this.numberValue} is ${currentFactor}.`);
       currentValue = currentValue / currentFactor;

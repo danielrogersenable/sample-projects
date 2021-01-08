@@ -1,5 +1,12 @@
 <h1>This is the story of number {{numberValue}}</h1>
 
+<div *ngIf="message">
+    <p>Hold up! There's a message here from the server!</p>
+    <p>Ahem.</p>
+    <p>{{message}}</p>
+    <p>There we go. On with the show.</p>
+</div>
+
 <ul>
     <li *ngFor="let factor of factorText">
         {{factor}}
