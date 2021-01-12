@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DockerPrinter": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
